@@ -358,11 +358,15 @@ footer h3{
   }
 
   footer img {
-    height: 45px;
+    height: 40px;
+  }
+
+  .index {
+    height: 60vh;
   }
 
   .logo svg {
-    width: 250px;
+    width: 150px;
     height: auto;
 
   }
