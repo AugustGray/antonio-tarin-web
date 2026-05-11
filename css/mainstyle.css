@@ -721,12 +721,38 @@ footer img{
         font-size: 24px;
     }
 
+    /* Navbar mobile: only show brand + contact button */
+    .nav-links li:not(:last-child) {
+        display: none;
+    }
+
+    .nav-brand {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .nav-container {
+        padding: 10px 16px;
+    }
+
+    .nav-links li:last-child a {
+        padding: 6px 14px;
+        font-size: 14px;
+    }
+
     #footer {
         text-align: center;
     }
 
     .footer-container {
         flex-direction: column;
+        align-items: center;
         gap: 30px;
+    }
+
+    .footer-info,
+    .footer-credit {
+        text-align: center;
+        width: 100%;
     }
 }
