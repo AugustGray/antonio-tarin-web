@@ -1,34 +1,91 @@
-/* Body */
+/* Base */
 
-html, body{
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #fafafa;
+	border-style: none;
+}
+
+/* Navbar */
+.navbar {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+	font-family: 'Roboto', sans-serif;
+}
+
+.nav-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 24px;
+}
+
+.nav-brand {
+	font-size: 22px;
+	font-weight: 300;
+	color: #333;
+	letter-spacing: 2px;
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 28px;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-links li a {
+	color: #333;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 300;
+	transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+	color: #666;
+}
+
+.nav-links li:last-child a {
+	background: #333;
+	color: #fff;
+	padding: 8px 20px;
+	border-radius: 4px;
+	transition: background 0.3s ease;
+}
+
+.nav-links li:last-child a:hover {
+	background: #555;
+}
+
+	/* Hero */
+
+.hero {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 55vh;
 	background-image: url("../img/background.webp");
-	height: 100vh;
-  background-position: center;
+	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	overflow: hidden;
-  border-style: none;
-}
-
-nav {
-	width: 100%;
-	text-align: center;
-	z-index: 1000;
-}
-
-	nav ul {
-		list-style: none;
-	}
-
-	/* Index */
-
-.index {
-	text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
 }
 
 .logo svg {
@@ -38,7 +95,7 @@ nav {
 }
 
 
-  .index h1 {
+  .hero h1 {
 		color: #333333;
 		text-align: center;
 		margin-bottom: .5em;
@@ -46,7 +103,7 @@ nav {
 		font-family: 'Roboto', sans-serif;
 	}
 
-  .index h2 {
+  .hero h2 {
 		color: #333333;
 		text-align: center;
 		margin-bottom: .5em;
@@ -65,9 +122,6 @@ nav {
 
 }
 
-body {
-  background: rgba(0,0,0,0.0);
-}
 
 /* Overlay Container */
 
@@ -315,12 +369,7 @@ h1 {
 
 /* Footer */
 footer{
-  position: fixed;
-  /* top: 80%;*/
-  bottom: 0;
-  left: 0;
-  margin-bottom: 16px;
-  width: 100vw;
+  width: 100%;
   height: auto;
   font-family: 'Roboto', sans-serif;
   color: #333333;
@@ -347,11 +396,7 @@ footer img{
   height: 35px;
 }
 
-footer h3{
-  padding-bottom: 5px;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+/* Responsive 1000px */
 @media (max-width: 1000px) {
   footer {
     font-size: 15px;
@@ -361,8 +406,8 @@ footer h3{
     height: 40px;
   }
 
-  .index {
-    height: 60vh;
+  .hero {
+    height: 80vh;
   }
 
   .logo svg {
@@ -371,8 +416,317 @@ footer h3{
 
   }
 
-  .index h1 {
+  .hero h1 {
     margin-top: 50px;
   }
 
+}
+
+/* ========================================
+   New Section Styles
+   ======================================== */
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.section-alt {
+    background: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: #333;
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+}
+
+/* About Section */
+#about {
+    background: #fff;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.about-tagline {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.about-text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.about-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Biography Section */
+#biography {
+    background: #f5f5f5;
+}
+
+.bio-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.bio-columns p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Timeline Section */
+#timeline {
+    background: #fff;
+    overflow: hidden;
+}
+
+.timeline-scroll {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding: 20px 0 30px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.timeline-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.timeline-scroll::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 3px;
+}
+
+.timeline-scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.timeline-scroll::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.timeline-card {
+    min-width: 320px;
+    max-width: 320px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.timeline-card:hover .card-img img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.card-date {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 6px;
+}
+
+.btn-see-more {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 8px 24px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.btn-see-more:hover {
+    background: #555;
+}
+
+/* Footer */
+#footer {
+    background: #222;
+    color: #ccc;
+    font-family: 'Roboto', sans-serif;
+    padding: 60px 0 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-info h3 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+
+.footer-info a {
+    display: block;
+    color: #999;
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+    color: #fff;
+}
+
+.footer-credit a {
+    color: #666;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.footer-credit a:hover {
+    color: #999;
+}
+
+.footer-credit h3 {
+  font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+
+.footer-credit p {
+  color: #999;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Responsive 768px */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-text {
+        order: 1;
+    }
+
+    .about-photo {
+        order: 2;
+    }
+
+    .bio-columns {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .timeline-card {
+        min-width: 280px;
+        max-width: 280px;
+    }
+
+    .section-title {
+        font-size: 26px;
+        margin-bottom: 40px;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    #footer {
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
