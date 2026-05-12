@@ -81,7 +81,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 55vh;
+	height: 65vh;
 	background-image: url("../img/background.webp");
 	background-position: center;
 	background-size: cover;
@@ -407,7 +407,7 @@ footer img{
   }
 
   .hero {
-    height: 80vh;
+    height: 65vh;
   }
 
   .logo svg {
